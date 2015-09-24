@@ -210,11 +210,15 @@ angular.module('mentio', [])
                         if (activeMenuScope) {
                             if (event.which === 9 || event.which === 13) {
                                 event.preventDefault();
+                                event.stopPropagation();
+                                event.stopImmediatePropagation();
                                 activeMenuScope.selectActive();
                             }
 
                             if (event.which === 27) {
                                 event.preventDefault();
+                                event.stopPropagation();
+                                event.stopImmediatePropagation();
                                 activeMenuScope.$apply(function () {
                                     activeMenuScope.hideMenu();
                                 });
@@ -222,6 +226,8 @@ angular.module('mentio', [])
 
                             if (event.which === 40) {
                                 event.preventDefault();
+                                event.stopPropagation();
+                                event.stopImmediatePropagation();
                                 activeMenuScope.$apply(function () {
                                     activeMenuScope.activateNextItem();
                                 });
@@ -230,6 +236,8 @@ angular.module('mentio', [])
 
                             if (event.which === 38) {
                                 event.preventDefault();
+                                event.stopPropagation();
+                                event.stopImmediatePropagation();
                                 activeMenuScope.$apply(function () {
                                     activeMenuScope.activatePreviousItem();
                                 });
@@ -238,6 +246,8 @@ angular.module('mentio', [])
 
                             if (event.which === 37 || event.which === 39) {
                                 event.preventDefault();
+                                event.stopPropagation();
+                                event.stopImmediatePropagation();
                              }
                         }
                     }
